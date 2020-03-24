@@ -22,3 +22,5 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
