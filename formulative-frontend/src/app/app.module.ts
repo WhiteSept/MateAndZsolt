@@ -4,15 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainInsuranceComponent } from './components/main-insurance/main-insurance.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainInsuranceComponent
+    MainInsuranceComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

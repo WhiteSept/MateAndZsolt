@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-main-insurance',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainInsuranceComponent implements OnInit {
 
-  constructor() { }
+  insuranceForm: FormGroup;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
