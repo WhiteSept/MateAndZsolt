@@ -18,7 +18,7 @@
 #progress li {
   float: left;
   padding: 10px 30px 10px 40px;
-  background: #333;
+  background: #55a2e6 ;
   color: #fff;
   position: relative;
   border-top: 1px solid #666;
@@ -29,29 +29,48 @@
 
 #progress li:before {
   content: '';
-  border-left: 16px solid #fff;
+  border-left: 16px solid #e9ecef;
   border-top: 16px solid transparent;
   border-bottom: 16px solid transparent;
   position: absolute;
   top: 0;
   left: 0;
-
 }
 #progress li:after {
   content: '';
-  border-left: 16px solid #333;
+  border-left: 16px solid #55a2e6;
   border-top: 16px solid transparent;
   border-bottom: 16px solid transparent;
   position: absolute;
   top: 0;
+
   left: 100%;
   z-index: 20;
 }
 
 #progress li.active {
-  background: #555;
+  background: #5d778f;
 }
 
 #progress li.active:after {
-  border-left-color: #555;
+  border-left-color: #5d778f;
+}
+
+.gridProgress{
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-areas:
+    ". b .";
+
+}
+
+.bar{
+  grid-area: b;
+}
+
+@media screen and (max-width: 760px) {
+  .gridProgress{
+    grid-template-columns: none;
+
+  }
 }
