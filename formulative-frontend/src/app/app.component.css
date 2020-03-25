@@ -8,7 +8,7 @@
     ". . ."
     ". h ."
     "b c a "
-    "f f f";
+    ". f .";
 }
 
 .content {
@@ -29,10 +29,6 @@
 .niceBackground{
   height: 100vh;
   background: #e9ecef;
-}
-
-.placeholderForA {
-  grid-area: a;
 }
 
 .placeholderForA {
