@@ -6,7 +6,8 @@ import {Subject} from "rxjs";
 })
 export class UtilRepoService {
 
-  progress = new Subject<number[]>();
+
+  progress = new Subject<any>();
 
   numOfInsureds: any;
   typeOfFrequency: any;

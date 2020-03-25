@@ -9,6 +9,7 @@ import {ProgressBarComponent} from './components/progress-bar/progress-bar.compo
 import {FooterComponent} from './components/footer/footer.component';
 import {Ng5SliderModule} from 'ng5-slider';
 import { SliderComponent } from './components/slider/slider.component';
+import { AdditionalInsuranceComponent } from './components/additional-insurance/additional-insurance.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SliderComponent } from './components/slider/slider.component';
     MainInsuranceComponent,
     ProgressBarComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    AdditionalInsuranceComponent
   ],
   imports: [
     BrowserModule,
