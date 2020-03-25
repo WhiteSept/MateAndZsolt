@@ -12,7 +12,6 @@ export class ProgressBarComponent implements OnInit {
     constructor(private utilRepoService: UtilRepoService) {
     }
 
-
     isFirstPage: boolean;
     isSecondPage: boolean;
     isThirdPage: boolean;
@@ -25,6 +24,7 @@ export class ProgressBarComponent implements OnInit {
                 this.isThirdPage = false;
             }
             if (data === Page.SECOND) {
+                console.log(Page.SECOND);
                 this.isSecondPage = true;
                 this.isFirstPage = false;
                 this.isThirdPage = false;
@@ -35,6 +35,5 @@ export class ProgressBarComponent implements OnInit {
                 this.isThirdPage = true;
             }
         });
-
     }
 }
