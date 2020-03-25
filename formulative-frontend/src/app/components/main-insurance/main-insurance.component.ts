@@ -15,7 +15,7 @@ export class MainInsuranceComponent implements OnInit {
     typeOfFrequency: any[];
 
 
-    constructor(private formBuilder: FormBuilder, private utilRepoService: UtilRepoService, private router: Router) {
+    constructor(private formBuilder: FormBuilder, private utilRepoService: UtilRepoService) {
         this.insuranceForm = this.formBuilder.group({});
         this.numberOfInsuredValues = this.utilRepoService.getNumberOfInsured();
         this.typeOfFrequency = this.utilRepoService.getTypeOfFrequency();
@@ -24,10 +24,4 @@ export class MainInsuranceComponent implements OnInit {
     ngOnInit(): void {
         this.utilRepoService.progress.next('first');
     }
-
-    nextPage() {
-        this.router.navigate(['/additional']);
-    }
-
-
 }

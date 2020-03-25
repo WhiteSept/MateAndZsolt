@@ -12,7 +12,7 @@ export class AdditionalInsuranceComponent implements OnInit {
 
     additionalInsuranceForm: FormGroup;
 
-    constructor(private utilRepoService: UtilRepoService, private formBuilder: FormBuilder, private router: Router) {
+    constructor(private utilRepoService: UtilRepoService, private formBuilder: FormBuilder) {
         this.additionalInsuranceForm = this.formBuilder.group({});
     }
 
@@ -20,11 +20,4 @@ export class AdditionalInsuranceComponent implements OnInit {
         this.utilRepoService.progress.next('second');
     }
 
-    nextPage() {
-
-    }
-
-    prevPage() {
-        this.router.navigate(['']);
-    }
 }
