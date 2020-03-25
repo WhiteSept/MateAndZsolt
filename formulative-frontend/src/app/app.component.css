@@ -1,12 +1,14 @@
 .grid {
+  background: #e9ecef;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 50px 20px 33px 1fr;
+  grid-template-rows: 50px 20px 33px 1fr 50px;
   grid-template-areas:
     "n n n"
     ". . ."
     ". h ."
-    "b c a ";
+    "b c a "
+    "f f f";
 }
 
 .content {
@@ -15,12 +17,33 @@
 }
 
 .header{
+  background: #e9ecef;
   grid-area: h;
 }
 
+.foot{
+  background: #e9ecef;
+  grid-area: f;
+}
+
 .niceBackground{
+  height: 100vh;
   background: #e9ecef;
 }
+
+.placeholderForA {
+  grid-area: a;
+}
+
+.placeholderForA {
+  grid-area: a;
+}
+
+.placeholderForB {
+  grid-area: b;
+  background: #e9ecef;
+}
+
 
 @media screen and (max-width: 1300px) {
   .grid{
@@ -29,7 +52,8 @@
       "n n n"
       ". . ."
       ". h ."
-      "b c a ";
+      "b c a "
+      "f f f";
   }
 }
 
