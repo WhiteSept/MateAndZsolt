@@ -9,6 +9,7 @@
         <div class="form-group col-md-6">
           <label for="numOfIns">Number of insured</label>
           <select id="numOfIns" class="form-control">
+            <option selected>Choose...</option>
             <option *ngFor="let numOfIns of this.numberOfInsuredValues" [value]="numOfIns.value">{{numOfIns.name}} </option>
           </select>
         </div>
@@ -24,10 +25,10 @@
           <input type="text" class="form-control" id="inputCity">
         </div>
         <div class="form-group col-md-4">
-          <label for="inputState">State</label>
+          <label for="inputState">Charge frequency:</label>
           <select id="inputState" class="form-control">
             <option selected>Choose...</option>
-            <option>...</option>
+            <option *ngFor="let type of this.typeOfFrequency" [value]="type.value">{{type.name}} </option>
           </select>
         </div>
         <div class="form-group col-md-2">
