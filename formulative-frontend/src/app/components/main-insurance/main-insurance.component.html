@@ -8,7 +8,9 @@
         </div>
         <div class="form-group col-md-6">
           <label for="numOfIns">Number of insured</label>
-          <input type="number" class="form-control" id="numOfIns">
+          <select id="numOfIns" class="form-control">
+            <option *ngFor="let numOfIns of this.numberOfInsuredValues" [value]="numOfIns.value">{{numOfIns.name}} </option>
+          </select>
         </div>
       </div>
       <app-slider></app-slider>
@@ -37,3 +39,5 @@
     </form>
   </div>
 </div>
+
+
