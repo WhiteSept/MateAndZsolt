@@ -11,10 +11,11 @@ export class MainInsuranceComponent implements OnInit {
 
   insuranceForm: FormGroup;
 
-  value: number = 123;
+  value: number = 10;
   options: Options = {
-    floor: 0,
-    ceil: 250
+    floor: 3,
+    
+    ceil: 35
   };
 
   constructor() {
