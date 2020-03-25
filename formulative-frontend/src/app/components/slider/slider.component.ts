@@ -8,10 +8,10 @@ import { Options } from 'ng5-slider';
 })
 export class SliderComponent implements OnInit {
 
-  value: number = 10;
+  value: number = 3;
   options: Options = {
     floor: 3,
-    ceil: 35
+    ceil: 35,
   };
   constructor() { }
 
