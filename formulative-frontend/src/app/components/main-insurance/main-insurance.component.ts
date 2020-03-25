@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {Options} from "ng5-slider";
 
 @Component({
@@ -11,14 +11,12 @@ export class MainInsuranceComponent implements OnInit {
 
   insuranceForm: FormGroup;
 
-  value: number = 10;
-  options: Options = {
-    floor: 3,
-    
-    ceil: 35
-  };
 
-  constructor() {
+
+  constructor(private formBuilder: FormBuilder) {
+    this.insuranceForm = this.formBuilder.group({
+
+    });
   }
 
   ngOnInit(): void {
