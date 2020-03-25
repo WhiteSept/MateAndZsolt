@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Page } from '../../enum/page';
 import { UtilRepoService } from '../../services/util-repo.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { UtilRepoService } from '../../services/util-repo.service';
     templateUrl: './main-insurance.component.html',
     styleUrls: ['./main-insurance.component.css'],
 })
+
+
 export class MainInsuranceComponent implements OnInit {
 
     insuranceForm: FormGroup;
@@ -22,6 +24,6 @@ export class MainInsuranceComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.utilRepoService.progress.next('first');
+        this.utilRepoService.progress.next(Page.FIRST);
     }
 }

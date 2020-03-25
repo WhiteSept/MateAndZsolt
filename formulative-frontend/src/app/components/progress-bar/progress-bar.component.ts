@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Page } from '../../enum/page';
 import { UtilRepoService } from '../../services/util-repo.service';
 
 @Component({
@@ -15,22 +16,20 @@ export class ProgressBarComponent implements OnInit {
     isFirstPage: boolean;
     isSecondPage: boolean;
     isThirdPage: boolean;
-    pages: boolean[] = [this.isFirstPage, this.isSecondPage, this.isThirdPage];
-    activePage: number[];
 
     ngOnInit(): void {
         this.utilRepoService.progress.subscribe((data) => {
-            if (data === 'first') {
+            if (data === Page.FIRST) {
                 this.isFirstPage = true;
                 this.isSecondPage = false;
                 this.isThirdPage = false;
             }
-            if (data === 'second') {
+            if (data === Page.SECOND) {
                 this.isSecondPage = true;
                 this.isFirstPage = false;
                 this.isThirdPage = false;
             }
-            if (data === 'third') {
+            if (data === Page.THIRD) {
                 this.isFirstPage = false;
                 this.isSecondPage = false;
                 this.isThirdPage = true;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Page } from '../../enum/page';
 import { UtilRepoService } from '../../services/util-repo.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class AdditionalInsuranceComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.utilRepoService.progress.next('second');
+        this.utilRepoService.progress.next(Page.SECOND);
     }
 
 }
