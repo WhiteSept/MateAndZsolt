@@ -8,13 +8,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ProgressBarComponent} from './components/progress-bar/progress-bar.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {Ng5SliderModule} from 'ng5-slider';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainInsuranceComponent,
     ProgressBarComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
