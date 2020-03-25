@@ -24,4 +24,10 @@ export class MainInsuranceComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  nextPage() {
+    this.utilRepoService.progress.next([0, 1, 0]);
+  }
+  prevPage() {
+    this.utilRepoService.progress.next([1, 0, 0]);
+  }
 }

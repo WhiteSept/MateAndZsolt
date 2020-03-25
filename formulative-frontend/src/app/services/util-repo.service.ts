@@ -1,9 +1,12 @@
 import {Injectable} from '@angular/core';
+import {Subject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UtilRepoService {
+
+  progress = new Subject<number[]>();
 
   numOfInsureds: any;
   typeOfFrequency: any;
@@ -15,7 +18,7 @@ export class UtilRepoService {
       {name: '3 person', value: 3},
       {name: '4 person', value: 4},
       {name: '5 person', value: 5},
-    ],
+    ];
       this.typeOfFrequency = [
         {name: 'Year', value: 1},
         {name: 'Half', value: 2},
