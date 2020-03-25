@@ -3,6 +3,42 @@
 
 }
 
+.gridTwoByTwo {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+  grid-template-areas: "l . r";
+}
+
+.gridTwoByTwoLeft {
+  grid-area: l;
+}
+
+.gridTwoByTwoRight {
+  grid-area: r;
+}
+
+@media screen and (max-width: 770px) {
+  .gridTwoByTwo {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "l"
+  "r";
+  }
+  .gridTwoByTwoLeft {
+    grid-area: l;
+    padding-top: 5px;
+  }
+
+  .gridTwoByTwoRight {
+    padding-top: 5px;
+    grid-area: r;
+  }
+
+
+}
+
 .switch {
   position: relative;
   display: inline-block;
