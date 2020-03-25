@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -10,6 +11,7 @@ import {FooterComponent} from './components/footer/footer.component';
 import {Ng5SliderModule} from 'ng5-slider';
 import { SliderComponent } from './components/slider/slider.component';
 import { AdditionalInsuranceComponent } from './components/additional-insurance/additional-insurance.component';
+import { DiscountProgressComponent } from './components/discount-progress/discount-progress.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { AdditionalInsuranceComponent } from './components/additional-insurance/
     FooterComponent,
     SliderComponent,
     SliderComponent,
-    AdditionalInsuranceComponent
+    AdditionalInsuranceComponent,
+    DiscountProgressComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { AdditionalInsuranceComponent } from './components/additional-insurance/
     ReactiveFormsModule,
     FormsModule,
     Ng5SliderModule,
-
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

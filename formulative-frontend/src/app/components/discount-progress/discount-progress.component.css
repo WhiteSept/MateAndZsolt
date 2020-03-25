@@ -1,0 +1,13 @@
+p {
+    font-family: Lato;
+}
+.grid-collumn{
+    display: grid;
+    grid-template-columns: 20fr 20fr;
+    grid-template-rows: 50px 150px 33px 1fr 50px;
+    grid-template-areas: "." "n" ". " ". " "."
+
+}
+.percent{
+    grid-area: n;
+}

@@ -1,63 +1,56 @@
 .grid {
-  background: #e9ecef;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 50px 20px 33px 1fr 50px;
-  grid-template-areas:
-    "n n n"
-    ". . ."
-    ". h ."
-    "b c a "
-    ". f .";
+    background: #e9ecef;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 20px 33px 1fr 50px;
+    grid-template-areas: "n n n" ". . ." ". h ." "b c a " ". f .";
 }
 
 .content {
-  grid-area: c;
+    grid-area: c;
 
 }
 
-.header{
-  background: #e9ecef;
-  grid-area: h;
+.header {
+    background: #e9ecef;
+    grid-area: h;
 }
 
-
-.foot{
-  background: #e9ecef;
-  grid-area: f;
+.discount-grid {
+    grid-area: a;
 }
 
-.niceBackground{
-  height: 100vh;
-  background: #e9ecef;
+.foot {
+    background: #e9ecef;
+    grid-area: f;
+}
+
+.niceBackground {
+    height: 100vh;
+    background: #e9ecef;
 }
 
 .placeholderForA {
-  grid-area: a;
+    grid-area: a;
 }
 
 .placeholderForB {
-  grid-area: b;
-  background: #e9ecef;
+    grid-area: b;
+    background: #e9ecef;
 }
 
 
 @media screen and (max-width: 1300px) {
-  .grid{
-    grid-template-columns: 0.54fr 2fr 0.54fr;
-    grid-template-areas:
-      "n n n"
-      ". . ."
-      ". h ."
-      "b c a "
-      "f f f";
-  }
+    .grid {
+        grid-template-columns: 0.54fr 2fr 0.54fr;
+        grid-template-areas: "n n n" ". . ." ". h ." "b c a " "f f f";
+    }
 }
 
 @media screen and (max-width: 770px) {
-  .grid{
-    grid-template-columns: none;
-  }
+    .grid {
+        grid-template-columns: none;
+    }
 }
 
 
