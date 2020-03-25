@@ -10,7 +10,6 @@ import {FooterComponent} from './components/footer/footer.component';
 import {Ng5SliderModule} from 'ng5-slider';
 import { SliderComponent } from './components/slider/slider.component';
 import { AdditionalInsuranceComponent } from './components/additional-insurance/additional-insurance.component';
-import { ToggleComponent } from './components/toggle/toggle.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { ToggleComponent } from './components/toggle/toggle.component';
     ProgressBarComponent,
     FooterComponent,
     SliderComponent,
-    ToggleComponent,
     SliderComponent,
     AdditionalInsuranceComponent
   ],
