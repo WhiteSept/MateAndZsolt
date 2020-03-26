@@ -46,6 +46,13 @@
     padding-top: 5px;
     grid-area: r;
   }
+  .form-grid-container{
+    padding-top: 33px;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-areas: ". c .";
+    justify-content: center;
+  }
 
 
 }

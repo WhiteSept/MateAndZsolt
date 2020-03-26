@@ -1,28 +1,30 @@
 <div class="justify-content-center ">
-<div class="grid-discount-progress-comtainer ">
-  <div class="col-10 shadow-lg p-1  mb-2  bg-white rounded percent">
-    <div class="discounts-grid">
-      <div class="all-discount">
-      <p class="text-center-grid">All discount</p>
-      </div>
-      <div class="dis-grid">
-        <circle-progress
-        [percent]="progress"
-        [radius]="30"
-        [outerStrokeWidth]="2"
-        [innerStrokeWidth]="2"
-        [space]="-2"
-        [outerStrokeColor]="'#55a2e6'"
-        [innerStrokeColor]="'#e7e8ea'"
-        [titleFontSize]="10"
-        [unitsFontSize]="10"
-        [showSubtitle]="false"
-        [animation]="true"
-        [startFromZero]="false"
-        [responsive]="true"
-      ></circle-progress>
+  <div class="grid-discount-progress-container ">
+    <div class="percent">
+      <div class="card shadow-lg p-1  mb-2  bg-white rounded">
+        <div class="discounts-grid">
+          <div class="all-discount">
+            <p class="text-center-grid">All discount</p>
+          </div>
+          <div class="dis-grid">
+            <circle-progress
+              [percent]="progress"
+              [radius]="20"
+              [outerStrokeWidth]="2"
+              [innerStrokeWidth]="2"
+              [space]="-2"
+              [outerStrokeColor]="'#55a2e6'"
+              [innerStrokeColor]="'#e7e8ea'"
+              [titleFontSize]="10"
+              [unitsFontSize]="10"
+              [showSubtitle]="false"
+              [animation]="true"
+              [startFromZero]="false"
+              [responsive]="true"
+            ></circle-progress>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
