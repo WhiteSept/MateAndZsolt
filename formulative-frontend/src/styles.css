@@ -10,3 +10,6 @@
 .right-button{
   grid-area: c;
 }
+.left-button{
+  grid-area: a;
+}

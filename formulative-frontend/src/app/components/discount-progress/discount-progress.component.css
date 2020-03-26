@@ -5,13 +5,13 @@ p {
 .grid-discount-progress-container {
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 33px 1fr;
+  grid-template-rows: 30px 2fr 1fr;
   grid-template-areas: ". ."
-                       "n .";
+                       "n ."
+                       ". .";
 }
 
 .percent {
-
   grid-area: n;
 }
 
@@ -38,6 +38,7 @@ p {
   background-color: #55a2e6;
 }
 .text-center-grid{
+
   grid-area: c2 ;
 }
 

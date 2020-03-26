@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Page } from '../enum/page';
+import { MainInsuranceModel } from '../model/main-insurance-model';
 
 @Injectable({
     providedIn: 'root',
@@ -8,6 +9,7 @@ import { Page } from '../enum/page';
 export class UtilRepoService {
 
     progress = new Subject<Page>();
+
 
     numOfInsureds: any [];
     typeOfFrequency: any [];
@@ -88,5 +90,40 @@ export class UtilRepoService {
 
     getCampaignDiscount() {
         return this.campaignDiscount;
+    }
+
+    findValues(formValue) {
+        for (let disc of this.campaignDiscount) {
+            if (disc.name == formValue.campaignDisc.toString()) {
+                formValue.campaignDisc = disc.value;
+            }
+        }
+        for (let type of this.typeOfFrequency) {
+            if (type.name == formValue.chargeFreq) {
+                formValue.campaignDisc = type.value;
+            }
+            console.log(formValue.chargeFreq);
+        }
+        for (let insured of  this.numOfInsureds) {
+            if (insured.name == formValue.numberOfIns) {
+                formValue.numberOfIns = insured.value;
+            }
+        }
+        for (let customer of this.customerDiscount) {
+            if (customer.name == formValue.customerDisc.toString()) {
+                formValue.customerDisc = customer.value;
+            }
+        }
+        for (let payment of this.paymentMethods) {
+            if (payment.name == formValue.paymentMethod) {
+                formValue.paymentMethod = payment.value;
+            }
+        }
+        for (let policy of this.policyDiscounts) {
+            if (policy.name == formValue.policyDisc) {
+                formValue.policyDisc = policy.value;
+            }
+        }
+
     }
 }

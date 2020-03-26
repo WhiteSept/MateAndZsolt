@@ -1,34 +1,82 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+import { Options } from 'ng5-slider';
 import { Page } from '../../enum/page';
+import { MainInsuranceModel } from '../../model/main-insurance-model';
+import { ApiService } from '../../services/api-service';
 import { UtilRepoService } from '../../services/util-repo.service';
 
 @Component({
-  selector: 'app-main-insurance',
-  templateUrl: './main-insurance.component.html',
-  styleUrls: ['./main-insurance.component.css'],
+    selector: 'app-main-insurance',
+    templateUrl: './main-insurance.component.html',
+    styleUrls: ['./main-insurance.component.css'],
 })
 
 
 export class MainInsuranceComponent implements OnInit {
 
-  insuranceForm: FormGroup;
-  numberOfInsuredValues: any[];
-  typeOfFrequency: any[];
-  policyDiscounts: any[];
-  paymentMethods: any [];
-  model: NgbDateStruct;
+    insuranceForm: FormGroup;
+    numberOfInsuredValues: any[];
+    typeOfFrequency: any[];
+    policyDiscounts: any[];
+    paymentMethods: any [];
+    model: NgbDateStruct;
 
-  constructor(private formBuilder: FormBuilder, private utilRepoService: UtilRepoService) {
-    this.insuranceForm = this.formBuilder.group({});
-    this.numberOfInsuredValues = this.utilRepoService.getNumberOfInsured();
-    this.typeOfFrequency = this.utilRepoService.getTypeOfFrequency();
-    this.policyDiscounts = this.utilRepoService.getPolicyDiscounts();
-    this.paymentMethods = this.utilRepoService.getPaymentMethods();
-  }
+    value: number = 10;
+    options: Options = {
+        floor: 3,
+        ceil: 35,
+        showSelectionBar: true,
 
-  ngOnInit(): void {
-    this.utilRepoService.progress.next(Page.FIRST);
-  }
+    };
+
+    constructor(private formBuilder: FormBuilder, private utilRepoService: UtilRepoService, private apiService: ApiService, private router: Router) {
+        this.insuranceForm = this.formBuilder.group({
+            amountOfIns: [],
+            numberOfIns: [],
+            insuranceDur: [],
+            chargeFreq: [],
+            policyDisc: [],
+            paymentMethod: [],
+            campaignDisc: [false],
+            customerDisc: [false],
+        });
+        this.numberOfInsuredValues = this.utilRepoService.getNumberOfInsured();
+        this.typeOfFrequency = this.utilRepoService.getTypeOfFrequency();
+        this.policyDiscounts = this.utilRepoService.getPolicyDiscounts();
+        this.paymentMethods = this.utilRepoService.getPaymentMethods();
+    }
+
+    ngOnInit(): void {
+        this.utilRepoService.progress.next(Page.FIRST);
+    }
+
+    getValues(): MainInsuranceModel {
+        const formValue: MainInsuranceModel = {
+                amountOfIns: this.insuranceForm.controls['amountOfIns'].value,
+                campaignDisc: this.insuranceForm.controls['campaignDisc'].value,
+                chargeFreq: this.insuranceForm.controls['chargeFreq'].value,
+                customerDisc: this.insuranceForm.controls['customerDisc'].value,
+                insuranceDur: this.insuranceForm.controls['insuranceDur'].value,
+                numberOfIns: this.insuranceForm.controls['numberOfIns'].value,
+                paymentMethod: this.insuranceForm.controls['paymentMethod'].value,
+                policyDisc: this.insuranceForm.controls['policyDisc'].value,
+            }
+        ;
+        this.utilRepoService.findValues(formValue);
+        console.log(formValue);
+        return formValue;
+    }
+
+    sendValues() {
+        console.log(this.getValues())
+        this.apiService.calculate(this.getValues()).subscribe(() => {
+
+        });
+
+    }
+
+
 }
