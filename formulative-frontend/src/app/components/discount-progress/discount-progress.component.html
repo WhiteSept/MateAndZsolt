@@ -5,52 +5,13 @@
         <div class="card-body">
           <div class="discounts-grid">
             <div class="grid-discount-table table-responsive">
-              <table class="table table-primary ">
-                <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Discount</th>
-                  <th scope="col">Percent</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Family discount</td>
-                  <td>15%</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Paying by frequency discount</td>
-                  <td>12%</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Payment method discount</td>
-                  <td>0%</td>
-                </tr>
-                </tbody>
-              </table>
+              <app-discount-table></app-discount-table>
             </div>
             <div class="all-discount">
               <p class="text-center-grid " >All discount</p>
             </div>
             <div class="dis-grid">
-              <circle-progress
-                [percent]="progress"
-                [radius]="20"
-                [outerStrokeWidth]="2"
-                [innerStrokeWidth]="2"
-                [space]="-2"
-                [outerStrokeColor]="'#000000'"
-                [innerStrokeColor]="'#e7e8ea'"
-                [titleFontSize]="10"
-                [unitsFontSize]="10"
-                [showSubtitle]="false"
-                [animation]="true"
-                [startFromZero]="false"
-                [responsive]="true"
-              ></circle-progress>
+             <app-percent-circle></app-percent-circle>
             </div>
           </div>
         </div>

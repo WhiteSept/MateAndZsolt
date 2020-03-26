@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./discount-progress.component.css']
 })
 export class DiscountProgressComponent implements OnInit {
-  progress = 35;
+
 
   constructor() { }
 

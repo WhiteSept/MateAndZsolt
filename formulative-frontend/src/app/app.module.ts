@@ -12,6 +12,8 @@ import {Ng5SliderModule} from 'ng5-slider';
 import { SliderComponent } from './components/slider/slider.component';
 import { AdditionalInsuranceComponent } from './components/additional-insurance/additional-insurance.component';
 import { DiscountProgressComponent } from './components/discount-progress/discount-progress.component';
+import { PercentCircleComponent } from './components/percent-circle/percent-circle.component';
+import { DiscountTableComponent } from './components/discount-table/discount-table.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DiscountProgressComponent } from './components/discount-progress/discou
     SliderComponent,
     SliderComponent,
     AdditionalInsuranceComponent,
-    DiscountProgressComponent
+    DiscountProgressComponent,
+    PercentCircleComponent,
+    DiscountTableComponent
   ],
   imports: [
     BrowserModule,
