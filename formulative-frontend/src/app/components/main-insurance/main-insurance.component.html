@@ -34,14 +34,14 @@
           <label for="policyDisc">Policy discount </label>
           <select id="policyDisc" class="form-control">
             <option selected>Choose...</option>
-            <option *ngFor="let type of this.typeOfFrequency" [value]="type.value">{{type.name}} </option>
+            <option *ngFor="let discount of this.policyDiscounts" [value]="discount.value">{{discount.name}} </option>
           </select>
         </div>
         <div class="gridTwoByTwoRight">
           <label for="paymentDiscount">Payment method </label>
           <select id="paymentDiscount" class="form-control">
             <option selected>Choose...</option>
-            <option *ngFor="let type of this.typeOfFrequency" [value]="type.value">{{type.name}} </option>
+            <option *ngFor="let method of this.paymentMethods" [value]="method.value">{{method.name}} </option>
           </select>
         </div>
       </div>
