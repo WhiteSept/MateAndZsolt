@@ -14,6 +14,7 @@ import { AdditionalInsuranceComponent } from './components/additional-insurance/
 import { DiscountProgressComponent } from './components/discount-progress/discount-progress.component';
 import { PercentCircleComponent } from './components/percent-circle/percent-circle.component';
 import { DiscountTableComponent } from './components/discount-table/discount-table.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DiscountTableComponent } from './components/discount-table/discount-tab
     ReactiveFormsModule,
     FormsModule,
     Ng5SliderModule,
+    NgbModule,
     NgCircleProgressModule.forRoot({})
   ],
   providers: [],

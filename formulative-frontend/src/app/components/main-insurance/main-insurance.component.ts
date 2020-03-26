@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import { Page } from '../../enum/page';
 import { UtilRepoService } from '../../services/util-repo.service';
 
@@ -17,6 +18,7 @@ export class MainInsuranceComponent implements OnInit {
   typeOfFrequency: any[];
   policyDiscounts: any[];
   paymentMethods: any [];
+  model: NgbDateStruct;
 
   constructor(private formBuilder: FormBuilder, private utilRepoService: UtilRepoService) {
     this.insuranceForm = this.formBuilder.group({});
