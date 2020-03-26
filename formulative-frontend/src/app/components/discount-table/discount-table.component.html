@@ -7,20 +7,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Family discount</td>
+        <tr *ngFor="let disc of discount ,let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{disc}}</td>
             <td>15%</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Paying by frequency discount</td>
-            <td>12%</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Payment method discount</td>
-            <td>0%</td>
         </tr>
     </tbody>
 </table>

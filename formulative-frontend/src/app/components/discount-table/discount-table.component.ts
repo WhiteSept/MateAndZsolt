@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilRepoService } from '../../services/util-repo.service';
 
 @Component({
-  selector: 'app-discount-table',
-  templateUrl: './discount-table.component.html',
-  styleUrls: ['./discount-table.component.css']
+    selector: 'app-discount-table',
+    templateUrl: './discount-table.component.html',
+    styleUrls: ['./discount-table.component.css'],
 })
 export class DiscountTableComponent implements OnInit {
 
-  constructor() { }
+    discount: string[];
 
-  ngOnInit(): void {
-  }
+    constructor(private utilRepoService: UtilRepoService) {
+        this.discount = utilRepoService.discounts;
+    }
+
+    ngOnInit(): void {
+    }
 
 }
