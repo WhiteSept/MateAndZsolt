@@ -2,11 +2,12 @@ p {
     font-family: Lato;
 }
 
-.grid-discount-progress-comtainer {
+.grid-discount-progress-container {
   display: grid;
   grid-template-columns: 80% 20%;
   grid-template-rows: 50px 300px;
-  grid-template-areas: "." "n"
+  grid-template-areas: ". ."
+                       "n .";
 
 }
 
@@ -35,3 +36,16 @@ p {
 .text-center-grid{
   grid-area: c2 ;
 }
+
+@media screen and (max-width: 770px) {
+  .grid-discount-progress-container {
+    height: 100vh;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-areas: ". n .";
+  }
+
+  .percent{
+    grid-area: n;
+  }
+}
+

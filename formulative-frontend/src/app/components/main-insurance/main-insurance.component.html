@@ -1,76 +1,74 @@
 <div class="form-grid-container">
   <div class="form-content">
-    <div class="car">
-      <div class="card-body bg-white shadow rounded">
-        <form [formGroup]="insuranceForm">
-          <div class="form-row justify-content-center">
-            <div class="form-group col-md-8">
-              <label for="amountOfIns">Amount of insurance</label>
-              <input type="number" class="form-control" id="amountOfIns">
-            </div>
+    <div class="card-body bg-white shadow rounded">
+      <form [formGroup]="insuranceForm">
+        <div class="form-row justify-content-center">
+          <div class="form-group col-md-8">
+            <label for="amountOfIns">Amount of insurance</label>
+            <input type="number" class="form-control" id="amountOfIns">
           </div>
-
-          <app-slider></app-slider>
-
-          <div class="gridTwoByTwo">
-            <div class="gridTwoByTwoLeft">
-              <label for="numOfIns">Number of insured</label>
-              <select id="numOfIns" class="form-control">
-                <option selected>Choose...</option>
-                <option *ngFor="let numOfIns of this.numberOfInsuredValues"
-                        [value]="numOfIns.value">{{numOfIns.name}} </option>
-              </select>
-            </div>
-
-            <div class="gridTwoByTwoRight">
-              <label for="chrgFreq">Charge frequency </label>
-              <select id="chrgFreq" class="form-control">
-                <option selected>Choose...</option>
-                <option *ngFor="let type of this.typeOfFrequency" [value]="type.value">{{type.name}} </option>
-              </select>
-            </div>
-          </div>
-
-          <div class="gridTwoByTwo">
-            <div class="gridTwoByTwoLeft">
-              <label for="policyDisc">Policy discount </label>
-              <select id="policyDisc" class="form-control">
-                <option selected>Choose...</option>
-                <option *ngFor="let discount of this.policyDiscounts"
-                        [value]="discount.value">{{discount.name}} </option>
-              </select>
-            </div>
-            <div class="gridTwoByTwoRight">
-              <label for="paymentDiscount">Payment method </label>
-              <select id="paymentDiscount" class="form-control">
-                <option selected>Choose...</option>
-                <option *ngFor="let method of this.paymentMethods" [value]="method.value">{{method.name}} </option>
-              </select>
-            </div>
-          </div>
-          <div class="row align-items-center text-center pt-3">
-            <div class="col">
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <span class="pl-sm-2 pl-md-3 pl-lg-3">Campaign discount</span>
-            </div>
-          </div>
-
-          <div class="row align-items-center text-center pt-3">
-            <div class="col">
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <span class="pl-sm-2 pl-md-3 pl-lg-3">Customer discount</span>
-            </div>
-          </div>
-        </form>
-        <div class="grid-row pt-3">
-          <button type="submit" class="btn btn-primary right-button " routerLink="/additional">Next</button>
         </div>
+
+        <app-slider></app-slider>
+
+        <div class="gridTwoByTwo">
+          <div class="gridTwoByTwoLeft">
+            <label for="numOfIns">Number of insured</label>
+            <select id="numOfIns" class="form-control">
+              <option selected>Choose...</option>
+              <option *ngFor="let numOfIns of this.numberOfInsuredValues"
+                      [value]="numOfIns.value">{{numOfIns.name}} </option>
+            </select>
+          </div>
+
+          <div class="gridTwoByTwoRight">
+            <label for="chrgFreq">Charge frequency </label>
+            <select id="chrgFreq" class="form-control">
+              <option selected>Choose...</option>
+              <option *ngFor="let type of this.typeOfFrequency" [value]="type.value">{{type.name}} </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="gridTwoByTwo">
+          <div class="gridTwoByTwoLeft">
+            <label for="policyDisc">Policy discount </label>
+            <select id="policyDisc" class="form-control">
+              <option selected>Choose...</option>
+              <option *ngFor="let discount of this.policyDiscounts"
+                      [value]="discount.value">{{discount.name}} </option>
+            </select>
+          </div>
+          <div class="gridTwoByTwoRight">
+            <label for="paymentDiscount">Payment method </label>
+            <select id="paymentDiscount" class="form-control">
+              <option selected>Choose...</option>
+              <option *ngFor="let method of this.paymentMethods" [value]="method.value">{{method.name}} </option>
+            </select>
+          </div>
+        </div>
+        <div class="row align-items-center text-center pt-3">
+          <div class="col">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <span class="pl-sm-2 pl-md-3 pl-lg-3">Campaign discount</span>
+          </div>
+        </div>
+
+        <div class="row align-items-center text-center pt-3">
+          <div class="col">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <span class="pl-sm-2 pl-md-3 pl-lg-3">Customer discount</span>
+          </div>
+        </div>
+      </form>
+      <div class="grid-row pt-3">
+        <button type="submit" class="btn btn-primary right-button " routerLink="/additional">Next</button>
       </div>
     </div>
   </div>

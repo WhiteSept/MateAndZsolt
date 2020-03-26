@@ -37,19 +37,16 @@
   .grid {
     height: 100vh;
     grid-template-columns: none;
-    grid-template-rows: 50px 20px 33px 1fr 0.25fr 50px;
-    grid-template-areas: "n" "." "h" "c" "d" "f";
-
-
+    grid-template-rows: 50px 20px 33px 1fr 50px 400px 50px;
+    grid-template-areas: "n" "." "h" "c" "." "d"  "f";
   }
 
   .discount-grid {
     grid-area: d;
+    justify-content: center;
   }
   .content {
     grid-area: c;
-    margin-left: -40px;
-    margin-right: -40px;
   }
 }
 
