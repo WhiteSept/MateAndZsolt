@@ -3,7 +3,6 @@
 
 }
 .form-grid-container{
-  padding-top: 33px;
   display: grid;
   grid-template-columns: 2fr 8fr 2fr;
   grid-template-areas: ". c .";
@@ -15,7 +14,7 @@
 }
 
 .gridTwoByTwo {
-  padding-top: 10px;
+  grid-row-gap: 10px;
   display: grid;
   grid-template-columns: 1fr 10px 1fr;
   grid-template-areas: "l . r";
@@ -29,9 +28,10 @@
   grid-area: r;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 999px) {
   .gridTwoByTwo {
     display: grid;
+    grid-row-gap: 5px;
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "l"
@@ -39,15 +39,12 @@
   }
   .gridTwoByTwoLeft {
     grid-area: l;
-    padding-top: 5px;
   }
 
   .gridTwoByTwoRight {
-    padding-top: 5px;
     grid-area: r;
   }
   .form-grid-container{
-    padding-top: 33px;
     display: grid;
     grid-template-columns: 0.1fr 1fr 0.1fr;
     grid-template-areas: ". c .";

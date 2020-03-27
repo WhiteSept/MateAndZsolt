@@ -1,14 +1,14 @@
-import {Injectable} from '@angular/core';
-import {Subject} from 'rxjs';
-import {Page} from '../enum/page';
-import {MainInsuranceModel} from '../model/main-insurance-model';
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { Page } from '../enum/page';
+import { MainInsuranceModel } from '../model/main-insurance-model';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class UtilRepoService {
 
-  progress = new Subject<Page>();
+    progress = new Subject<Page>();
 
 
   numOfInsureds: any [];

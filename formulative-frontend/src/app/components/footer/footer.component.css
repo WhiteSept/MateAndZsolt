@@ -1,6 +1,3 @@
-.background {
-
-}
 
 a {
   color: white;
@@ -10,48 +7,11 @@ span {
   color: white;
 }
 
-.footer-grid {
-  height: 100%;
+#footer{
   background-color: #55a2e6;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "f";
-  align-items: center;
+  min-height: 50px;
+  vertical-align: middle;
+  line-height: 50px;
+  text-align: center;
 }
 
-.footer-grid-container {
-  grid-area: f;
-}
-
-@media screen and (max-width: 1300px) {
-  .footer-grid {
-    height: 100%;
-    background-color: #55a2e6;
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-
-  }
-
-  .footer-grid-container {
-    grid-area: f;
-  }
-
-}
-
-@media screen and (max-width: 770px) {
-  .footer-grid {
-    height: 100%;
-    background-color: #55a2e6;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "f";
-    align-items: center;
-
-  }
-
-  .footer-grid-container {
-    grid-area: f;
-  }
-
-}

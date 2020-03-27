@@ -28,7 +28,7 @@
         <div class="gridTwoByTwo">
           <div class="gridTwoByTwoLeft">
             <label for="numOfIns">Number of insured</label>
-            <select id="numOfIns" class="form-control" formControlName="numberOfIns" (change)="selectHandler()">
+            <select id="numOfIns" class="form-control" formControlName="numberOfIns">
               <option selected>Choose...</option>
               <option *ngFor="let numOfIns of this.numberOfInsuredValues"
                       [value]="numOfIns.value">{{numOfIns.name}} </option>
@@ -37,9 +37,9 @@
 
           <div class="gridTwoByTwoRight">
             <label for="chrgFreq">Charge frequency </label>
-            <select id="chrgFreq" class="form-control" formControlName="chargeFreq" (change)="selectHandler()">
+            <select id="chrgFreq" class="form-control" formControlName="chargeFreq">
               <option selected>Choose...</option>
-              <option  *ngFor="let type of this.typeOfFrequency"
+              <option *ngFor="let type of this.typeOfFrequency"
                       [value]="type.value">{{type.name}} </option>
             </select>
           </div>
@@ -48,7 +48,7 @@
         <div class="gridTwoByTwo">
           <div class="gridTwoByTwoLeft">
             <label for="policyDisc">Policy discount </label>
-            <select id="policyDisc" class="form-control" formControlName="policyDisc" (change)="selectHandler()">
+            <select id="policyDisc" class="form-control" formControlName="policyDisc">
               <option selected>Choose...</option>
               <option *ngFor="let discount of this.policyDiscounts"
                       [value]="discount.value">{{discount.name}} </option>
@@ -56,7 +56,7 @@
           </div>
           <div class="gridTwoByTwoRight">
             <label for="paymentDiscount">Payment method </label>
-            <select id="paymentDiscount" class="form-control" formControlName="paymentMethod" (change)="selectHandler()">
+            <select id="paymentDiscount" class="form-control" formControlName="paymentMethod">
               <option selected>Choose...</option>
               <option *ngFor="let method of this.paymentMethods"
                       [value]="method.value">{{method.name}} </option>
@@ -66,7 +66,7 @@
         <div class="row align-items-center text-center pt-3">
           <div class="col">
             <label class="switch">
-              <input type="checkbox" formControlName="campaignDisc" (change)="selectHandler()">
+              <input type="checkbox" formControlName="campaignDisc">
               <span class="slider round"></span>
             </label>
             <span class="pl-sm-2 pl-md-3 pl-lg-3">Campaign discount</span>
@@ -76,7 +76,7 @@
         <div class="row align-items-center text-center pt-3">
           <div class="col">
             <label class="switch">
-              <input type="checkbox" formControlName="customerDisc" (change)="selectHandler()">
+              <input type="checkbox" formControlName="customerDisc">
               <span class="slider round"></span>
             </label>
             <span class="pl-sm-2 pl-md-3 pl-lg-3">Customer discount</span>
@@ -85,7 +85,7 @@
       </form>
       <div class="grid-row pt-3">
         <button type="submit" class="btn btn-primary right-button "
-                (click)="sendValues()">Next
+        >Next
         </button>
       </div>
     </div>
