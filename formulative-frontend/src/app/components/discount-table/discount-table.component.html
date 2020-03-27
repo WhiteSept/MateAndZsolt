@@ -7,10 +7,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let disc of discount ,let i = index">
+        <tr *ngFor="let disc of allDiscounts ,let i = index">
             <th scope="row">{{i+1}}</th>
-            <td>{{disc}}</td>
-            <td>15%</td>
+            <td>{{disc.name}}</td>
+            <td>{{disc.value}}%</td>
         </tr>
     </tbody>
 </table>
