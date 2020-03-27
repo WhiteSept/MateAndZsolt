@@ -9,7 +9,7 @@ import {DiscountService} from "../../services/discount-service";
 })
 export class PercentCircleComponent implements OnInit {
 
-progress : number = 0;
+progress : number;
   constructor(private discountService: DiscountService) {
   }
 
