@@ -9,14 +9,15 @@ import {DiscountService} from "../../services/discount-service";
 })
 export class PercentCircleComponent implements OnInit {
 
-progress : number;
+  progress: number = 0;
+
   constructor(private discountService: DiscountService) {
   }
 
   ngOnInit(): void {
     this.discountService.allDiscount.subscribe((data) => {
-     this.progress = data;
-    console.log(this.progress)
+      this.progress = data * 100;
+      console.log(this.progress)
     })
   }
 

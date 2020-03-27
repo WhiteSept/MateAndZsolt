@@ -29,23 +29,19 @@ export class DiscountService {
       {name: 3, value: 0.04},
       {name: 4, value: 0},
     ];
-
     this.paymentMethods = [
       {name: 1, value: 0},
       {name: 2, value: 0.05}
     ];
-
     this.campaignDiscount = [
       {name: 1, value: 0.1},
       {name: 2, value: 0},
     ];
-
     this.customerDiscount = [
       {name: 1, value: 0.1},
       {name: 2, value: 0},
     ];
   }
-
   findValues(data: DiscountModel): DiscountModel {
     let discounts: DiscountModel = data;
 

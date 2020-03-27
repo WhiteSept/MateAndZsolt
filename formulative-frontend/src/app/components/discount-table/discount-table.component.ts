@@ -38,7 +38,7 @@ export class DiscountTableComponent implements OnInit {
     this.discountService.discount.subscribe((data) => {
 
       this.discounts = this.discountService.findValues(data);
-      let allDiscountPercent = 0
+      let allDiscountPercent = 0;
       for (const prop in this.discounts) {
         if (this.discounts[prop] !== 0)
           allDiscountPercent += (+this.discounts[prop]);
