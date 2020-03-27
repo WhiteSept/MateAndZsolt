@@ -1,3 +1,111 @@
+
+
+@media (max-width: 999px){
+#progress-bar-small{
+  min-width: 390px;
+  align-content: center;
+  align-content: center;
+  text-align: center;
+  padding-right: 20px;
+}
+
+#main-element{
+  padding-top: 33px;
+}
+
+#progress-discount-small{
+  border-style: solid;
+  border: green;
+  min-height: 350px;
+  padding-top: 33px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 390px) {
+  #progress-bar{
+    min-width: 390px;
+    align-content: center;
+    align-content: center;
+    text-align: center;
+    padding-right: 30px;
+  }
+}
+
+
+@media (min-width: 999px) {
+  .grid{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 33px 1fr 50px;
+    grid-gap: 33px;
+    grid-template-areas: "nav nav"
+                         "progress ."
+                         "form discount"
+                         "footer footer";
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  .progress-bar-custom{
+    grid-area: progress;
+  }
+
+  .discount{
+    grid-area: discount;
+  }
+
+  .footer-site{
+    grid-area: footer;
+    min-height: 50px;
+  }
+
+}
+
+@media (min-width: 1350px) {
+  .grid{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 50px 33px 1fr 50px;
+    grid-gap: 33px;
+    grid-template-areas: "nav nav nav"
+    ". progress ."
+    ". form discount"
+    "footer footer footer";
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  .progress-bar-custom{
+    grid-area: progress;
+  }
+
+  .discount{
+    grid-area: discount;
+  }
+
+  .footer-site{
+    grid-area: footer;
+    min-height: 50px;
+  }
+
+}
+/*
 .grid {
   height: 100vh;
   background: #e9ecef;
@@ -50,5 +158,4 @@
   }
 }
 
-
-
+ */

@@ -78,5 +78,9 @@ export class MainInsuranceComponent implements OnInit {
 
     }
 
-
+  onHit() {
+    for (const option of Object.values(this.insuranceForm.controls)) {
+      console.log(option.value);
+    }
+  }
 }

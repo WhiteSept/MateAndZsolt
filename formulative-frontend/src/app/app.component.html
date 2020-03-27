@@ -1,17 +1,22 @@
 <div class="grid">
-  <div class="header">
-    <app-progress-bar></app-progress-bar>
+  <div class="progress-bar-custom">
+    <div id="progress-bar-small">
+      <app-progress-bar></app-progress-bar>
+    </div>
   </div>
-  <div class="content">
-    <router-outlet></router-outlet>
+  <div class="form">
+    <div id="main-element">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <div class="discount-grid">
-    <app-discount-progress></app-discount-progress>
+  <div class="discount">
+    <div id="progress-discount-small">
+      <app-discount-progress></app-discount-progress>
+    </div>
   </div>
-
-  <div class="foot">
-    <app-footer></app-footer>
+  <div class="footer-site">
+    <div id="footer-small">
+      <app-footer></app-footer>
+    </div>
   </div>
-
 </div>
-

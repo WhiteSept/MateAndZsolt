@@ -4,9 +4,9 @@ p {
 
 .grid-discount-progress-container {
   display: grid;
-  grid-template-columns: 80% 20%;
-  grid-template-rows: 30px 2fr 1fr;
-  grid-template-areas: ". ."
+  grid-template-columns: 90% 10%;
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
                        "n ."
                        ". .";
 }
@@ -42,7 +42,7 @@ p {
   grid-area: c2 ;
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 999px) {
   .grid-discount-progress-container {
     height: 100vh;
     grid-template-columns: 0.1fr 1fr 0.1fr;
