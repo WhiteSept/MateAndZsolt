@@ -9,4 +9,7 @@ export class DiscountService {
 
   discount = new Subject<DiscountModel>()
 
+  constructor() {
+  }
+
 }
