@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DiscountService} from "../../services/discount-service";
+
 
 @Component({
   selector: 'app-percent-circle',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./percent-circle.component.css']
 })
 export class PercentCircleComponent implements OnInit {
-  progress = 35;
-  constructor() { }
+
+progress : number = 0;
+  constructor(private discountService: DiscountService) {
+  }
 
   ngOnInit(): void {
+    this.discountService.allDiscount.subscribe((data) => {
+     this.progress = data;
+    console.log(this.progress)
+    })
   }
 
 }

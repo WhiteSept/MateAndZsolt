@@ -93,7 +93,7 @@ export class MainInsuranceComponent implements OnInit {
       if (discounts[prop] === null) {
         discounts[prop] = 0;
       }
-      console.log(discounts)
+
     }
 
     this.sendDiscount(discounts);
