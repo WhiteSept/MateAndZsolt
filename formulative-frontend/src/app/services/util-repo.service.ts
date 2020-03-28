@@ -1,7 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
-import { Page } from '../enum/page';
-import { MainInsuranceModel } from '../model/main-insurance-model';
+import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs';
+import {Page} from '../enum/page';
 
 @Injectable({
     providedIn: 'root',

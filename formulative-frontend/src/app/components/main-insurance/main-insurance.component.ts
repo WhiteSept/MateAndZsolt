@@ -9,6 +9,8 @@ import {ApiService} from '../../services/api-service';
 import {UtilRepoService} from '../../services/util-repo.service';
 import {DiscountService} from "../../services/discount-service";
 import {DiscountModel} from "../../model/discount-model";
+import {BackendService} from "../../services/backend.service";
+import {log} from "util";
 
 @Component({
   selector: 'app-main-insurance',
@@ -33,9 +35,12 @@ export class MainInsuranceComponent implements OnInit {
 
   };
 
-  constructor(private formBuilder: FormBuilder, private utilRepoService: UtilRepoService,
-              private apiService: ApiService, private router: Router,
-              private discountService: DiscountService) {
+  constructor(private formBuilder: FormBuilder,
+              private utilRepoService: UtilRepoService,
+              private apiService: ApiService,
+              private router: Router,
+              private discountService: DiscountService,
+              private backendService: BackendService) {
     this.insuranceForm = this.formBuilder.group({
       amountOfIns: [],
       numberOfIns: [],
@@ -76,7 +81,7 @@ export class MainInsuranceComponent implements OnInit {
     this.apiService.calculate(this.getValues()).subscribe(() => {
       console.log(this.getValues())
     });
-
+    // this.backendService.firstStep().subscribe(value1 => console.log('ez már a csecsen beckend: ', value1))
   }
 
   selectHandler() {
