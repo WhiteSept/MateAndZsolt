@@ -78,10 +78,10 @@ export class MainInsuranceComponent implements OnInit {
   }
 
   sendValues() {
-    this.apiService.calculate(this.getValues()).subscribe(() => {
-      console.log(this.getValues())
-    });
-    // this.backendService.firstStep().subscribe(value1 => console.log('ez már a csecsen beckend: ', value1))
+    // this.apiService.calculate(this.getValues()).subscribe(() => {
+    //   console.log(this.getValues())
+    // });
+    this.backendService.firstStep().subscribe(value1 => console.log('ez már a csecsen beckend: ', value1))
   }
 
   selectHandler() {
